@@ -13,3 +13,14 @@ public class UserServiceImpl implements UserService {
         return userInfo;
     }
 }
+
+
+(Application)
+
+@EnableDubbo
+@SpringBootApplication
+public class ProducerApp {
+    public static void main(String[] args) {
+        SpringApplication.run(ProducerApp.class, args);
+    }
+}
