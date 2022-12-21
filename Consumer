@@ -1,0 +1,31 @@
+
+(Get methods from service by -- RPC)
+
+
+@RestController
+public class UserController {
+
+    @Reference(check = false)
+    private UserService userService;
+
+    @RequestMapping("hello")
+    public UserInfo hello(@RequestParam("id") String id) {
+        return userService.hello(id);
+    }
+
+}
+
+(aplicaiton.yml)
+
+
+server:
+  port: 8080
+
+spring:
+  application:
+    name: springboot-dubbo-consumer
+
+dubbo:
+  registry:
+    protocol: zookeeper
+    address: myhost:2181
