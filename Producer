@@ -24,3 +24,19 @@ public class ProducerApp {
         SpringApplication.run(ProducerApp.class, args);
     }
 }
+
+
+
+(application.yml)
+
+server:
+  port: 8081
+
+spring:
+  application:
+    name: springboot-dubbo-producer
+
+dubbo:
+  registry:
+    # 註冊中心地址及協定
+    address: Nacos
